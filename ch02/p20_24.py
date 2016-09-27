@@ -1,11 +1,5 @@
-path = '/Users/qianyuxiang/pydata-book/ch02/usagov_bitly_data2012-03-16-1331923249.txt'
-
-import json
+from ch02.main import records
 from utils import print0 as print
-
-records = [json.loads(record) for record in open(path)]
-
-print(records[0])
 
 time_zones = [record['tz'] for record in records if 'tz' in record]
 
